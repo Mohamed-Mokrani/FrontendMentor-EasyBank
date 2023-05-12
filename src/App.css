@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 18px;
+  overflow-x: hidden;
+  
+}
+/* ****************************************-NavBar-******************************************************* */
+header{
+  background-color: white;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2em 8%;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.097);
+  height: 10vh;
+  z-index: 11;
+}
+header img{
+  cursor: pointer;
+}
+header button{
+  display: none;
+}
+nav{
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.412);
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  margin-top: 10vh;
+  padding-top: 3vh;
+}
+.nav_open{
+  transform: translate(-100%);
+}
+nav ul{
+  background-color: white;
+  color: hsl(233, 26%, 24%);
+  font-size: 1.1em;
+  width: 90%;
+  margin: 0 auto;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1em;
+  padding: 2em;
+  border-radius: .5em;
+}
+
+
+
+.request_butt{
+  display: none;
+  font-size: .9em;
+  padding: .8em 1.5em;
+  border-radius: 1.5em;
+  border: none;
+  outline: none;
+  
+  background: linear-gradient(207deg, rgba(2, 0, 36, 0.198) 0%, rgba(49,211,92,1) 0%, rgba(5, 153, 212, 0.856) 100%, rgba(5, 153, 212, 0.535) 100%, rgba(3, 133, 203, 0.724) 100%);
+  color: white;
+  cursor: pointer;
+  transition: all 300ms;
+}
+.request_butt:hover{
+  background: linear-gradient(207deg, rgba(2, 0, 36, 0.198) 0%, rgba(49, 211, 92, 0.415) 0%, rgba(5, 153, 212, 0.856) 100%, rgba(5, 153, 212, 0.535) 100%, rgba(3, 133, 203, 0.724) 100%);
+
+}
+
+@media (min-width:800px) {
+  #close , #open{
+    display: none;
+  }
+  .nav_open{
+    transform: translate(0);
+  }
+  nav{
+    position: initial;
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    width: fit-content;
+  }
+  nav ul{
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+    border-radius: 0;
+    color: hsl(233, 8%, 62%);
+    font-size: 1em;
+  }
+  nav ul li{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 4px solid white;
+    cursor: pointer;
+    transition: all 300ms;
+  }
+  nav ul li:hover{
+    border-bottom: 4px solid hsl(136, 65%, 51%);
+    color: hsl(233, 26%, 24%);
+  }
+  header .request_butt{
+    display: block;
+  }
+}
+
+/* ****************************************-End NavBar-******************************************************* */
+
+
+/* ****************************************-Section 1-******************************************************* */
+.section1{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mockups_bg{
+  background-image: url("./images/bg-intro-mobile.svg");
+  background-size: cover;
+  width: 100%;
+  height: 50%;
+  display: flex;
+}
+.mockups_bg img{
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+.mockups_descp{
+  width: 80%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.mockups_descp h1{
+  font-size: 2em;
+  color: hsl(233, 26%, 24%);
+  font-weight: 400;
+}
+.mockups_descp p{
+  margin: 0 0 1.8em;
+  color: hsl(233, 8%, 62%);
+  line-height: 1.5;
+  font-size: .9em;
+  
+  
+}
+.mockups_descp button{
+  display: block;
+  font-weight: 700;
+  padding: 1.1em 2.5em;
+}
+#dd{
+  display: none;
+}
+@media (min-width:900px) {
+  .section1{
+    flex-direction: row-reverse;
+    
+  }
+  .mockups_bg{
+    background-image: none;
+    position: relative;
+    height: 100%;
+    width: 60%;
+  }
+  .mockups_bg img:last-child{
+    width: 90%;
+    height: 120%;
+    position: absolute;
+    right: 0;
+
+  }
+  .mockups_descp{
+    width: 30%;
+    height: 30%;
+    margin-left: 8%;
+    text-align: start;
+    align-items: flex-start;
+  }
+  .mockups_descp h1{
+    font-size: 2.5em;
+  }
+  #dd{
+    display: block;
+    position: absolute;
+    width: 150%;
+    height: 110%;
+  }
+}
+
+/* ****************************************-End Section 1-******************************************************* */
+
+/* ****************************************-Section 2-******************************************************* */
+.section2{
+  background-color: hsl(220, 16%, 96%);
+  padding: 5em 8%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5em;
+}
+
+.section2 h1{
+  color: hsl(233, 26%, 24%);
+  font-weight: 500;
+}
+.section2 p{
+  color: hsl(233, 8%, 62%);
+  line-height: 1.5;
+  font-size: .9em;
+}
+.why h1{
+  font-size: 1.8em;
+text-align: center;
+}
+.reasons{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2.5em;
+}
+.reasons h1{
+  font-size: 1.5em;
+}
+.reason{
+  text-align: center;
+}
+
+@media (min-width:700px){
+  .reasons{
+    flex-direction: row;
+  }
+  .section2{
+    align-items: flex-start;
+  }
+  .section2 div{
+    text-align: start;
+  }
+  .why{
+    width: 45% ;
+    
+
+  }
+  .reason{
+    width: 15em ;
+  }
+}
+/* ****************************************-End Section 2-******************************************************* */
+
+/* ****************************************-Articles-******************************************************* */
+.section3{
+  display: flex;
+  flex-direction: column;
+  padding: 80px 0 100px 0;
+  
+align-items: center;
+
+}
+
+.section3-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(135, 206, 250, 0.04);
+}
+.section3 h1{
+  color: hsl(233, 26%, 24%);
+  font-size: 1.8em;
+  font-weight: 500;
+  
+  
+}
+.articles{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2em;
+  width: 80%;
+  
+}
+.article{
+  background-color: white;
+  
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+  
+}
+.article img{
+  width: 100%;
+  height: 200px;
+  
+}
+.article h2{
+  color: hsl(233, 26%, 24%);
+  font-size: 1.2em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 300ms;
+}
+.article h2:hover{
+  color: hsl(136, 65%, 51%);
+}
+.article_desc{
+  padding:  1em ;
+}
+.article_desc h5, .article_desc p{
+  margin: 0;
+}
+
+.article_desc p, .article_desc h5{
+  color: hsl(233, 8%, 62%);
+  font-size: .8em;
+  font-weight: 400;
+  line-height: 1.4;
+}
+@media (min-width:635px){
+  
+  .articles{
+    flex-direction: row;
+    width: 100%;
+  }
+  .article{
+    width: 15em;
+  }
+  .article img{
+    width: 100%;
+    height: 200px;
+    
+  }
+}
+/* ****************************************-End Articles-******************************************************* */
+
+
+
+/* ****************************************-Footer-******************************************************* */
+
+footer ul, footer ol{
+  list-style: none;
+  padding: 0;
+}
+footer img{
+  filter: invert(100%) sepia(99%) saturate(2%) hue-rotate(207deg) brightness(108%) contrast(100%);
+}
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(233, 26%, 24%);
+  padding: 3em 8%;
+}
+footer button{
+  display: block !important;
+}
+.left_footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.left_footer div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.left_footer ul{
+  display: flex;
+  flex-direction: column;
+  gap: .8em;
+  text-align: center;
+  margin-top: 0;
+  font-size: .9em;
+  color: hsl(220, 16%, 96%);
+}
+.left_footer div ol{
+  display: flex;
+  gap: .7em;
+  color: white;
+  font-size: 1.4em;
+}
+.left_footer div ol li:hover{
+  color: hsl(136, 65%, 51%);
+  cursor: pointer;
+}
+.right_footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.right_footer h5{
+  color: hsl(233, 8%, 62%);
+  font-weight: 400;
+  font-size: .8em;
+  margin-bottom: 0;
+}
+
+@media (min-width:930px){
+  footer{
+    
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+  .left_footer{
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-between;
+  }
+  .left_footer ul{
+    text-align: start;
+  }
+  
+}
+/* ****************************************-End Footer-******************************************************* */
