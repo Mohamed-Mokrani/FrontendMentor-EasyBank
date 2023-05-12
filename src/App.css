@@ -405,6 +405,8 @@ footer button{
   color: white;
   font-size: 1.4em;
 }
+
+.left_footer div ol li:hover{transition: all 300ms;}
 .left_footer div ol li:hover{
   color: hsl(136, 65%, 51%);
   cursor: pointer;
